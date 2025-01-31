@@ -14,11 +14,15 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Entity
 public class Attachment {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String fileOriginalName; /* pdp.jpg, inn.pdf */
+
     private long size; /* 2048000 */
+
     private String contentType; /* application/pdf, image/png */
 
     /* fs da saqlanadigan nomi */

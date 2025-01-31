@@ -11,10 +11,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 public class AttachmentContent {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private byte[] mainContent; /* Main content */
-    @OneToOne
-    private Attachment attachment; /* Qaysi faylga tegishliligi (Foreign key) */
+
+    @OneToOne private Attachment attachment; /* Qaysi faylga tegishliligi (Foreign key) */
 }
